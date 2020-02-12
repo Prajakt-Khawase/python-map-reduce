@@ -16,6 +16,7 @@ for line in s:
     # start over when changing keys
     thisKey = store 
     thisValue = 0.0
+    
   
   # apply the aggregation function
   thisValue += float(amount)
