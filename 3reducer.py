@@ -2,7 +2,7 @@ s = open("02.txt","r")
 r = open("03.txt", "w")
 
 thisKey = ""
-thisValue = 0.0
+thisValue = 0
 
 for line in s:
   data = line.strip().split('\t')
@@ -12,14 +12,15 @@ for line in s:
     if thisKey:
       # output the last key value pair result
       r.write(thisKey + '\t' + str(thisValue)+'\n')
-
+    count = 0
     # start over when changing keys
     thisKey = store 
-    thisValue = 0.0
+    thisValue = 0
     
   
   # apply the aggregation function
-  thisValue += float(amount)
+  
+  thisValue += 1 
 
 # output the final entry when done
 r.write(thisKey + '\t' + str(thisValue)+'\n')
